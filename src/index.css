@@ -14,11 +14,11 @@ body {
     box-sizing: border-box;
 }
 
-.marginFixed {
-    margin: 0px auto;
-    max-width: 1100px;
+a {
+    text-decoration: none;
 }
 
-/* a {
-    text-decoration: none;
-} */
+.customMargin {
+    margin: 0px auto;
+    width: 1100px;
+}

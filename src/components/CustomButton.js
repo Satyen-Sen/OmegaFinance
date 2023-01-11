@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { Button } from '@mui/material';
-import { ColorModeContext } from '../context';
+import React from 'react';
+import { Button, useTheme } from '@mui/material';
 
 function CustomButton(props) {
-    const { mode } = useContext(ColorModeContext);
+
+    const theme = useTheme();
 
     return (
         <Button variant='contained' sx={{
@@ -12,9 +12,9 @@ function CustomButton(props) {
             fontFamily: 'Inter',
             fontSize: 18,
             textTransform: 'none',
-            backgroundColor: mode === 'dark' ? '#F6F6F7' : '#11193F',
+            backgroundColor: theme.palette.text.primary,
             '&:hover': {
-                backgroundColor: mode === 'dark' ? '#BCBCC3' : '#4C5067',
+                backgroundColor: theme.palette.text.secondary,
             }
         }}>
             {props.title}

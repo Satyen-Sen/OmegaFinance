@@ -1,0 +1,11 @@
+[
+    {"id":"01", "title":"Jerry Johnson", "rating":5, "position":"Retail Manager, Walmart", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"02", "title":"Peter Smith", "rating":4, "position":"Executive Incharge, CVS Health", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"03", "title":"Richard Joe", "rating":3, "position":"Technical Executive, AT&T", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"04", "title":"Joseph Thompson", "rating":4, "position":"Senior Developer, Metaverse", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"05", "title":"Walter Lewis", "rating":5, "position":"Area Manager, Ford Motors", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"06", "title":"Carl Harris", "rating":4, "position":"Supply Incharge, Comcast Telecom", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"07", "title":"Andrew Scott", "rating":3, "position":"Executive Engineer, Philips", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"08", "title":"Kevin Brian", "rating":4, "position":"Branch Manager, AMC Bank", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}, 
+    {"id":"09", "title":"Frank Taylor", "rating":5, "position":"Product Designer, General Motors", "avatar":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"}
+]

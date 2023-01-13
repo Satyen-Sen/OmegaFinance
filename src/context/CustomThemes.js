@@ -8,7 +8,7 @@ export const customThemes = {
         text: {
             primary: '#F6F6F7',
             secondary: '#7F7996',
-            disabled: '#FFD700',
+            disabled: '#FFC527',
         },
     },
     light: {
@@ -20,7 +20,7 @@ export const customThemes = {
         text: {
             primary: '#11193F',
             secondary: '#4C485A',
-            disabled: '#FFD700',
+            disabled: '#FFC527',
         },
     },
 };

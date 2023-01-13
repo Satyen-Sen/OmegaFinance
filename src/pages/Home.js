@@ -1,13 +1,11 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import Navbar from '../components/Navbar';
-import SplashScreen from '../components/SplashScreen';
+import NavbarHome from '../components/NavbarHome';
 
 function Home() {
     return (
         <Box>
-            <Navbar />
-            <SplashScreen />
+            <NavbarHome />
         </Box>
     );
 }

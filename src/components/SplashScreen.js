@@ -1,17 +1,16 @@
 import React from 'react';
-import { Box, Typography, Grid, useTheme } from '@mui/material';
+import { Box, Grid, useTheme } from '@mui/material';
 import { Player } from '@lottiefiles/react-lottie-player';
 import CustomHeading from './CustomHeading';
 import CustomDescription from './CustomDescription';
 import CustomButton from './CustomButton';
-
-// listarray = ['Stocks', 'Mutual Funds', 'Digital Gold', 'FDs'];
+import CustomTextAnimation from './CustomTextAnimation';
 
 function SplashScreen() {
 
     const theme = useTheme();
 
-    const description1 = 'Omega Finance Group is an expert stock market trading and coaching institution with a proven track record in offering highly effective stock market trading ideas & financial planning services to a broad spectrum of clients. After our inception back in 2017 as a venture for helping out newbie stock investors, we have offered numerous clients recommendations and ideas that helped bag millions.';
+    const description1 = 'Omega Finance Group is an expert stock market trading and coaching institution with a proven track record in offering highly effective stock market trading ideas & financial planning services to a broad spectrum of clients. We have offered numerous clients recommendations and ideas that helped bag millions.';
     const description2 = 'We help you see the world differently, discover opportunities you may never have imagined and achieve results that bridge what is with what can be.';
 
     return (
@@ -36,9 +35,7 @@ function SplashScreen() {
 
                     <Grid item xs={6} sx={{ mt: 8 }}>
                         <CustomHeading content='Learn & Invest in' />
-                        <Typography sx={{ fontSize: 20, color: theme.palette.text.disabled, fontWeight: 500, my: 4 }}>
-                            Stocks, Mutual Funds, Digital Gold & Government Bonds.
-                        </Typography>
+                        <CustomTextAnimation />
                         <CustomDescription content={description2} />
                         <CustomButton title='Contact Us' />
                     </Grid>

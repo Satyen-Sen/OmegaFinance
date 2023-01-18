@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import CreateAccount from './pages/CreateAccount';
+import ResetPassword from './pages/ResetPassword';
+import Verify from './pages/Verify';
+import Page404 from './pages/Page404';
 
 function App() {
 
@@ -11,10 +14,12 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<LandingPage />} />
+                <Route path='/home' element={<Home />} />
                 <Route path='/login' element={<LoginPage />} />
                 <Route path='/register' element={<CreateAccount />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='*' element={<h1>Error 404 | Page not Found </h1>} />
+                <Route path='/reset-password' element={<ResetPassword />} />
+                <Route path='/verify' element={<Verify />} />
+                <Route path='*' element={<Page404 />} />
             </Routes>
         </BrowserRouter>
     );

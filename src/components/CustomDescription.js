@@ -6,7 +6,7 @@ function CustomDescription(props) {
     const theme = useTheme();
 
     return (
-        <Typography sx={{ color: theme.palette.text.secondary, fontFamily: 'Inter', fontSize: 16, fontWeight: 500, my: 4 }}>
+        <Typography sx={{ color: theme.palette.text.secondary, fontFamily: 'Inter', fontSize: 16, fontWeight: 500, my: 4 }} align="justify">
             {props.content}
         </Typography>
 

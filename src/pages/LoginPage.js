@@ -8,9 +8,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import CustomHeading from '../components/CustomHeading';
 import CustomButton from '../components/CustomButton';
-import logo from '../assets/logo/logoShort.png';
 import { Player } from '@lottiefiles/react-lottie-player';
-import ThemeToggleButton from '../context/ThemeToggleButton';
+import NavbarTransparent from '../components/NavbarTransparent';
 
 export default function LoginPage() {
 
@@ -20,18 +19,13 @@ export default function LoginPage() {
     const handleMouseDownPassword = (event) => { event.preventDefault() };
 
     return (
-        <Box sx={{ width: '100%', minHeight: '100%', backgroundColor: theme.palette.background.default }}>
-            <Box className='customMargin' sx={{ pt: 4 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'end' }}>
-                    <ThemeToggleButton />
-                </Box>
+        <Box sx={{ width: '100%', height: 1000, backgroundColor: theme.palette.background.default }}>
+            <Box className='customMargin'>
+                <NavbarTransparent />
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
-                        <Box sx={{ mt: 4 }}>
-                            <img src={logo} alt='Omega Finance Logo' width={160} height={80} />
-                            <Box sx={{ mt: 2 }}>
-                                <Player autoplay loop src='https://assets7.lottiefiles.com/packages/lf20_lgvdhvlz.json' style={{ height: '400px', width: '400px' }}></Player>
-                            </Box>
+                        <Box sx={{ mt: 6 }}>
+                            <Player autoplay loop src='https://assets7.lottiefiles.com/packages/lf20_lgvdhvlz.json' style={{ height: '400px', width: '400px' }}></Player>
                         </Box>
                     </Grid>
                     <Grid item xs={6}>
@@ -40,8 +34,8 @@ export default function LoginPage() {
 
                             <Stack spacing={2}>
                                 <FormControl variant="outlined">
-                                    <InputLabel>User Name</InputLabel>
-                                    <OutlinedInput label="User Name" sx={{ width: 350 }} />
+                                    <InputLabel>Email</InputLabel>
+                                    <OutlinedInput label="Email" sx={{ width: 350 }} />
                                 </FormControl>
                                 <FormControl variant="outlined">
                                     <InputLabel>Password</InputLabel>

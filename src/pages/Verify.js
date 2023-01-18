@@ -1,21 +1,25 @@
 import { useState } from 'react';
+import { MuiOtpInput } from "mui-one-time-password-input";
 import { Link } from 'react-router-dom';
-import { Box, Grid, FormControl, InputLabel, TextField, OutlinedInput, InputAdornment, Typography, Divider, Stack, Button, IconButton, useTheme, Chip } from '@mui/material';
+import { Box, Stack, Grid, FormControl, InputLabel, OutlinedInput, InputAdornment, Typography, Button, IconButton, useTheme } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GoogleIcon from '@mui/icons-material/Google';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import CustomHeading from '../components/CustomHeading';
+import CustomDescription from '../components/CustomDescription';
 import CustomButton from '../components/CustomButton';
 import { Player } from '@lottiefiles/react-lottie-player';
 import NavbarTransparent from '../components/NavbarTransparent';
 
-export default function LoginPage() {
+const descriptionText = "We have sent you a 6-digit OTP code on your email. Please enter the code to verify your email."
+
+export default function Verify() {
     const theme = useTheme();
     const [showPassword, setShowPassword] = useState(false);
+    const [value, setValue] = useState("");
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleMouseDownPassword = (event) => { event.preventDefault() };
+    const handleChange = (newValue) => {setValue(newValue)};
+    const handleComplete = (finalValue) => {console.log(finalValue)};
 
     return (
         <Box sx={{ width: '100%', height: 1000, backgroundColor: theme.palette.background.default }}>
@@ -24,27 +28,21 @@ export default function LoginPage() {
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <Box sx={{ mt: 6 }}>
-                            <Player autoplay loop src='https://assets2.lottiefiles.com/packages/lf20_mjlh3hcy.json' style={{ height: '400px', width: '400px' }}></Player>
+                            <Player autoplay loop src='https://assets10.lottiefiles.com/packages/lf20_t6nmtpwm.json' style={{ height: '400px', width: '400px' }}></Player>
                         </Box>
                     </Grid>
                     <Grid item xs={6}>
                         <Box sx={{ width: 450, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <CustomHeading content='Create an Acccount' />
+                            <CustomHeading content='Enter OTP' />
+                            <CustomDescription content={descriptionText} />
 
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2}>
-                                    <TextField label="First Name" variant="outlined" />
-                                    <TextField label="Last Name" variant="outlined" />
-                                </Stack>
+                            <Stack spacing={4}>
+                                
+                                <MuiOtpInput length={6} onComplete={handleComplete} value={value} onChange={handleChange}/>
 
-                                <FormControl variant="outlined">
-                                    <InputLabel>Email</InputLabel>
-                                    <OutlinedInput label="Email" />
-                                </FormControl>
-
-                                <FormControl variant="outlined">
-                                    <InputLabel>Password</InputLabel>
-                                    <OutlinedInput label="Password"
+                                <FormControl variant="outlined" sx={{width:'100%'}}>
+                                    <InputLabel>New Password</InputLabel>
+                                    <OutlinedInput label="New Password"
                                         type={showPassword ? 'text' : 'password'}
                                         endAdornment={
                                             <InputAdornment position="end">
@@ -60,36 +58,27 @@ export default function LoginPage() {
                                     />
                                 </FormControl>
                             </Stack>
-
+     
                             <Box sx={{ mt: 4 }}>
                                 <Link to='/login'>
-                                    <CustomButton title='Register' />
+                                    <CustomButton title='Submit' />
                                 </Link>
                             </Box>
 
-                            <Box sx={{ width: "100%", my: 4, fontWeight: 500, display: 'flex', justifyContent: 'space-between' }}>
-                                <Link to='/login'>
+                            <Box sx={{ width: "100%", my: 2, fontWeight: 500, display: 'flex', justifyContent: 'space-between' }}>
+                                <Button type='text' sx={{ textTransform: 'none', }}>
                                     <Typography variant='body' sx={{ color: theme.palette.text.secondary, '&:hover': { color: theme.palette.text.primary } }}>
-                                        Already having an account?
+                                        Resend OTP?
                                     </Typography>
+                                </Button>
+                                <Link to='/login'>
+                                    <Button type='text' sx={{ textTransform: 'none', }}>
+                                        <Typography variant='body' sx={{ color: theme.palette.text.secondary, '&:hover': { color: theme.palette.text.primary } }}>
+                                            Return to Sign In
+                                        </Typography>
+                                    </Button>
                                 </Link>
                             </Box>
-
-                            <Divider variant="middle" sx={{ mb: '9px', width: '100%', color: theme.palette.text.secondary }}>
-                                <Chip label="OR" />
-                            </Divider>
-
-                            <Stack direction="row" spacing={2} sx={{ mt: 4, mb: 8 }}>
-                                <Button fullWidth size="large" variant="outlined">
-                                    <FacebookIcon sx={{ color: '#1877F2' }} />
-                                </Button>
-                                <Button fullWidth size="large" variant="outlined">
-                                    <GoogleIcon sx={{ color: '#DF3E30' }} />
-                                </Button>
-                                <Button fullWidth size="large" variant="outlined">
-                                    <TwitterIcon sx={{ color: '#1C9CEA' }} />
-                                </Button>
-                            </Stack>
                         </Box>
                     </Grid>
                 </Grid>
